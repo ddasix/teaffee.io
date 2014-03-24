@@ -1,5 +1,3 @@
-debug('This would be the main JS file.');
-
 function debug(msg){
 	var log = document.getElementById("debuglog");
 
