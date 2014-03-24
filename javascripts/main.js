@@ -1,18 +1,22 @@
+debug = false;
+
 function debug(msg){
-	var log = document.getElementById("debuglog");
+	if (debug){
+		var log = document.getElementById("debuglog");
 
-	if (!log){
-		log = document.createElement("div");
-		log.id = "debuglog";
+		if (!log){
+			log = document.createElement("div");
+			log.id = "debuglog";
 
-		log.innerHTML = "<h1>Debug Log</h1>";
+			log.innerHTML = "<h1>Debug Log</h1>";
 
-		document.body.appendChild(log);
+			document.body.appendChild(log);
+		}
+
+		var pre = document.createElement("pre");
+		var text = document.createTextNode(msg);
+
+		pre.appendChild(text);
+		log.appendChild(pre);
 	}
-
-	var pre = document.createElement("pre");
-	var text = document.createTextNode(msg);
-
-	pre.appendChild(text);
-	log.appendChild(pre);
 }
