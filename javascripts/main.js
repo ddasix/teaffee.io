@@ -1,7 +1,7 @@
-debug = false;
+debug_ = false;
 
 function debug(msg){
-	if (debug){
+	if (debug_){
 		var log = document.getElementById("debuglog");
 
 		if (!log){
